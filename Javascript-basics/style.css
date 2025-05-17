@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, rgb(28, 28, 99), black, black, rgb(90, 19, 90));
+}
+
+header {
+   position:fized;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background-color: rgba(235, 231, 231, 0.11);
+    backdrop-filter: blur(3px);
+    text-wrap: wrap;
+    position: fixed;
+    height: 4em;
+
+}
+
+header .logo {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.list{
+    display: flex;
+    padding: 20px;
+}
+
+.icons ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+
+}
+
+
+.title{
+    width: 100%;
+    font-size: 35px;
+    background: linear-gradient(to right, rgb(40, 207, 236), rgb(220, 47, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.intro{
+    background: linear-gradient(to right,rgb(61, 209, 235),rgb(175, 40, 228),rgb(61,209,235),rgb(175, 40, 228),rgb(61, 209, 235));
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200%;
+    color: transparent;
+    animation: animate-gradient 4s linear infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 50%;
+    margin-top: 300px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes animate-gradient{
+    to{
+        background-position: 200%;
+    }
+}
+
+.about {
+
+    text-transform: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(2px);
+    padding: 10px;
+}
+
+
+.img {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -200;
+    opacity: 0.5;
+}
+
+.img2 {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 1;
+
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    width:80%;
+    justify-content: center;
+}
+
+.container .card
+{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.container .card .content{
+    padding: 20px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.container .card .content h3
+{   
+    top:-80px;
+    right: 30px;
+    font-size: 2em;
+    color: rgba(255,255,255,0.5);
+    transition: 0.5s; 
+    pointer-events: none;
+    background: linear-gradient(to right, rgb(61, 209, 235),rgb(175, 40, 228));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.container .card .content p
+{
+    font-family: 1em;
+    color: #fff;
+    font-weight: 30;
+}
+
+.container .card .content a{
+    color: black;
+    background-color: #fff;
+    display:inline-block;
+    position: relative;
+    padding: 2px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.edu{
+    background: linear-gradient(to right, rgb(49, 250, 250), rgb(255, 87, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 2em;
+}
+
